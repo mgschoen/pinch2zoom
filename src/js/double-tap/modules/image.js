@@ -12,7 +12,7 @@ export default class Image {
 
         this.detailState = 'STATE_NORMAL';
         this.numTaps = 0;
-        this.tapDelay = 1000;
+        this.tapDelay = 500;
 
         this.init();
     }
