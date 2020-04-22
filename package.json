@@ -1,0 +1,21 @@
+{
+  "name": "pinch2zoom-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./dist/ && parcel build ./src/html/*.html",
+    "deploy": "surge dist/ --domain dirty-kick.surge.sh",
+    "start": "parcel ./src/html/*.html --no-hmr",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "sass": "^1.26.3"
+  },
+  "dependencies": {
+    "hammerjs": "^2.0.8"
+  }
+}
