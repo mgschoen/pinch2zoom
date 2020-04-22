@@ -8,12 +8,13 @@ export default class App {
 
     init() {
         let imageElements = document.querySelectorAll('figure.image');
-        imageElements.forEach(element => {
+        for (let i = 0; i < imageElements.length; i++) {
+            let element = imageElements[i];
             let imageId = element.getAttribute('id');
             if (imageId) {
                 let image = new Image(imageId);
                 this.images.push(image);
             }
-        });
+        }
     }
 }
