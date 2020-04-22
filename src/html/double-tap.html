@@ -6,8 +6,22 @@
         <title>Image Zoom Proof of Concept</title>
     </head>
     <body>
+        <header>
+            <h1>Double Tap to Zoom</h1>
+            <summary>Hier führt ein Doppel-Touch auf das Bild zum Vergrößern.</summary>
+            <h3>Vorteile:</h3>
+            <ul>
+                <li>Auch das ist von Usern erlerntes, etwas haptischeres Verhalten als ein Button</li>
+                <li>Double Tap Detection ließe sich problemlos selbst implementieren -> wir müssten keine Library nachladen</li>
+                <li>Fürs Verschieben des vergrößerten Bildes könnten wir natives Scrolling verwenden</li>
+                <li>Scroll to Close funktioniert weiterhin</li>
+            </ul>
+            <h3>Nachteile:</h3>
+            <ul>
+                <li>Wahrscheinlich nicht so intuitiv wie Pinch to Zoom</li>
+            </ul>
+        </header>
         <article class="lg-hidden md-hidden">
-            <h1>Form follows fucking function</h1>
             <figure class="image full-width" id="img-1">
                 <img src="https://i.picsum.photos/id/940/800/510.jpg">
                 <a href="#" class="image-open-zoom">
@@ -59,7 +73,9 @@
                 </div>
             </div>
         </footer>
-        <h1 class="sm-hidden">Bitte auf einem Mobilgerät öffnen</h1>
+        <aside class="sm-hidden">
+            <h2>Bitte auf einem Mobilgerät öffnen</h2>
+        </aside>
         <script src="../js/double-tap/double-tap.js"></script>
     </body>
 </html>

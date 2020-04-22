@@ -6,6 +6,21 @@
     <title>Image Zoom Proof of Concept</title>
 </head>
 <body>
+    <header>
+        <h1>Resize Button</h1>
+        <summary>Bei dieser Variante fügen wir der Zoom-Layer-UI einen Vergrößern-Button hinzu.</summary>
+        <h3>Vorteile:</h3>
+        <ul>
+            <li>Implementierung straightforward</li>
+            <li>Fürs Verschieben des vergrößerten Bildes könnten wir natives Scrolling verwenden</li>
+            <li>Scroll to Close funktioniert weiterhin</li>
+        </ul>
+        <h3>Nachteile:</h3>
+        <ul>
+            <li>Moch mehr UI, die das Bild verdeckt</li>
+            <li>Wahrscheinlich nicht so intuitiv wie Pinch to Zoom</li>
+        </ul>
+    </header>
     <article class="lg-hidden md-hidden">
         <h1>Form follows fucking function</h1>
         <figure class="image full-width" id="img-1">
@@ -81,7 +96,9 @@
             </div>
         </div>
     </footer>
-    <h1 class="sm-hidden">Bitte auf einem Mobilgerät öffnen</h1>
+    <aside class="sm-hidden">
+        <h2>Bitte auf einem Mobilgerät öffnen</h2>
+    </aside>
     <script src="../js/resize-button/resize-button.js"></script>
 </body>
 </html>

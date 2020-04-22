@@ -6,6 +6,21 @@
         <title>Image Zoom Proof of Concept</title>
     </head>
     <body>
+        <header>
+            <h1>Fake Pinch to Zoom</h1>
+            <summary>Anstatt dass das Bild wirklich mit den Finger größer gezogen werden kann, gibt es im Zoom Layer zwei Zustände: "Herkömmliche Darstellung" (gesamtes Bild zu sehen) und "vergrößerte Darstellung". Zwischen den Zuständen kann man mit einer Pinch-Geste wechseln.</summary>
+            <h3>Vorteile:</h3>
+            <ul>
+                <li>Es kann keine inkonsistenten Zwischenzustände geben</li>
+                <li>Wenn eine Pinch-Geste nicht korrekt erkannt wird, ist das erst mal nicht tragisch – dann tun wir eben nichts</li>
+                <li>Imitiert zumindest das gewünschte Verhalten</li>
+            </ul>
+            <h3>Nachteile:</h3>
+            <ul>
+                <li>Auch hier würde Scroll to Close nicht mehr funktionieren</li>
+                <li>Wir müssten Panning selbst implementieren (machbar, aber weniger natürlich als nativer Scroll)</li>
+            </ul>
+        </header>
         <article class="lg-hidden md-hidden">
             <h1>Form follows fucking function</h1>
             <figure class="image full-width" id="img-1">
@@ -59,7 +74,9 @@
                 </div>
             </div>
         </footer>
-        <h1 class="sm-hidden">Bitte auf einem Mobilgerät öffnen</h1>
+        <aside class="sm-hidden">
+            <h2>Bitte auf einem Mobilgerät öffnen</h2>
+        </aside>
         <script src="../js/fake-pinch/fake-pinch.js"></script>
     </body>
 </html>
